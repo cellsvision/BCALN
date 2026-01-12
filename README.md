@@ -86,6 +86,7 @@ To apply the pipeline to your own dataset:
 
 ## Repository structure
 
+```
 BCALN/
 ├── NSLN/
 ├── SLN/
@@ -99,4 +100,4 @@ BCALN/
 │       └── *.npy
 ├── requirements.txt
 └── README.md
-
+```
