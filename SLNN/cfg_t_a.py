@@ -72,4 +72,4 @@ def _t(z):
 C.trans_train = _t('train')
 C.trans_test = _t('test')
 
-C.y_encode = lambda x: [0,1] if x['转移的前哨（蓝染）LN数量']>=3 else [1,0]
+C.y_encode = lambda x: [0,1] if x['positive_SLN_count']>=3 else [1,0]
