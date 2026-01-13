@@ -61,7 +61,7 @@ class LymDataset(Randomizable, CacheDataset):
         idx_counter = 0
         df_copy = self.__df__.copy()
         for j, r in df_copy.iterrows():
-            id_ = r['唯一编号']
+            id_ = r['Unique_ID']
             h_ = r['hos']
             pkl_ = r['pkl_path']
             gt_val = self._cfg.y_encode(r)
