@@ -56,7 +56,7 @@ class LymDataset(Dataset):
         idx_counter = 0
         df_copy = self.__df__.copy()
         for j, r in df_copy.iterrows():
-            id_ = r['唯一编号']
+            id_ = r['Unique_ID']
             h_ = r['hos']
             gt_val = self._cfg.y_encode(r)
             npy_path = f'{self._cfg.fea_dir}/{id_}.npy',
