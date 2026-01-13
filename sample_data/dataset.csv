@@ -1,2 +1,2 @@
-影像号,住院号,姓名,其他编号,唯一编号,转移的前哨（蓝染）LN数量,转移的非前哨LN（无蓝染）数量,pkl_path,hos,patient_dir,valid,set
-11034292,,,,ZE_11034292,0,0,./sample_data/ZS2Y11034292.pkl,中二,,1,train
+MRI_ID,Hospitalization_ID,name,other_ID,Unique_ID,positive_SLN_count,positive_NSLN_count,pkl_path,hos,patient_dir,valid,set
+11034292,,,,ZE_11034292,0,0,./sample_data/ZS2Y11034292.pkl,center2,,1,train
