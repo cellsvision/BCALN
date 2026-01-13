@@ -202,10 +202,10 @@ if (C.mode == 'train') or (C.mode == 'continue_train'):
                     
 
                 for i,content in {
-                        'cohort_internal':['中二','中肿'],
-                        'cohort_external_1':['山东','南海'],
-                        'cohort_external_2':['江门','赣南'],
-                        'cohort_external_3':['广西','汕头','新疆人民自治区','喀什'],
+                        'cohort_internal':['center1','center2'],
+                        'cohort_external_1':['center3','center4'],
+                        'cohort_external_2':['center5','center6'],
+                        'cohort_external_3':['center7','center8','center9','center10'],
                         }.items():
                     tmp_lables_all = lables_all[np.where(np.isin(hos_all,content))]
                     tmp_probs_all = probs_all[np.where(np.isin(hos_all,content))]
@@ -300,10 +300,10 @@ else:
             
 
         for i,content in {
-                'cohort_internal':['中二','中肿'],
-                'cohort_external_1':['山东','南海'],
-                'cohort_external_2':['江门','赣南'],
-                'cohort_external_3':['广西','汕头','新疆人民自治区','喀什'],
+                'cohort_internal':['center1','center2'],
+                'cohort_external_1':['center3','center4'],
+                'cohort_external_2':['center5','center6'],
+                'cohort_external_3':['center7','center8','center9','center10'],
                 }.items():
             tmp_lables_all = lables_all[np.where(np.isin(hos_all,content))]
             tmp_probs_all = probs_all[np.where(np.isin(hos_all,content))]
