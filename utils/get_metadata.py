@@ -35,7 +35,7 @@ for idx, row in tqdm(df.iterrows(), total=len(df), desc="Processing patients"):
             print('No DICOM file found',patient_path,dce_folder)
             raise FileNotFoundError("No DICOM file found")
 
-        # 读取 DICOM 信息
+        # read DICOM info
         ds = pydicom.dcmread(dicom_file, stop_before_pixels=True)
         manufacturer = ds.get((0x0008, 0x0070), 'N/A')  # Manufacturer
         manufacturer = manufacturer.value if  manufacturer!='N/A' else 'N/A'
@@ -48,7 +48,7 @@ for idx, row in tqdm(df.iterrows(), total=len(df), desc="Processing patients"):
 
         results.append({
             # 'patient_dir': patient_path,
-            'patient_id':row['唯一编号'],
+            'patient_id':row['Unique_ID'],
             'manufacturer': str(manufacturer),
             'model_name': str(model_name),
             'field_strength_T': field_strength if isinstance(field_strength, (int, float)) else 'N/A'
@@ -64,7 +64,7 @@ for idx, row in tqdm(df.iterrows(), total=len(df), desc="Processing patients"):
             'field_strength_T': 'Error'
         })
 
-# 保存结果为 CSV
+# save as CSV
 result_df = pd.DataFrame(results)
 result_df.to_csv('./mri_machine_info.csv', index=False)
 print("finished: ./mri_machine_info.csv")
